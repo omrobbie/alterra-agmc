@@ -1,0 +1,740 @@
+{
+	"info": {
+		"_postman_id": "33ef8b6b-6387-498d-a2e9-6b377c454ccd",
+		"name": "AGMC - Day 1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3739225"
+	},
+	"item": [
+		{
+			"name": "Sepulsa",
+			"item": [
+				{
+					"name": "Token",
+					"item": [
+						{
+							"name": "token",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/token?client_id=CLIENT01&client_secret=SECRET01",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"token"
+									],
+									"query": [
+										{
+											"key": "client_id",
+											"value": "CLIENT01"
+										},
+										{
+											"key": "client_secret",
+											"value": "SECRET01"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Client",
+					"item": [
+						{
+							"name": "client/id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/client/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"client",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1234"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "client/id",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"client_id\": 1234,\n  \"client_key\": \"CLIENT01\",\n  \"client_secret\": \"SECRET01\",\n  \"status\": true\n}\n"
+								},
+								"url": {
+									"raw": "{{base_url}}/client/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"client",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1234"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "client/id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/client/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"client",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1234"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "client",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/client?p=1&rp=10&client_id=CLIENT01&status=true",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"client"
+									],
+									"query": [
+										{
+											"key": "p",
+											"value": "1"
+										},
+										{
+											"key": "rp",
+											"value": "10"
+										},
+										{
+											"key": "client_id",
+											"value": "CLIENT01"
+										},
+										{
+											"key": "status",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "client",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"client_id\": 1234,\n  \"client_key\": \"CLIENT01\",\n  \"client_secret\": \"SECRET01\",\n  \"status\": true\n}\n"
+								},
+								"url": {
+									"raw": "{{base_url}}/client",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"client"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "User",
+					"item": [
+						{
+							"name": "user/id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/user/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user/id",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 1,\n  \"name\": \"Rudy Sujarwo\",\n  \"age\": 56,\n  \"sex\": \"male\",\n  \"client_id\": 1\n}\n"
+								},
+								"url": {
+									"raw": "{{base_url}}/user/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user/id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/user/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/user?p=1&rp=10&name=Rudy Surajwo&age=56",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user"
+									],
+									"query": [
+										{
+											"key": "p",
+											"value": "1"
+										},
+										{
+											"key": "rp",
+											"value": "10"
+										},
+										{
+											"key": "name",
+											"value": "Rudy Surajwo"
+										},
+										{
+											"key": "age",
+											"value": "56"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 1,\n  \"name\": \"Rudy Sujarwo\",\n  \"age\": 56,\n  \"sex\": \"male\",\n  \"client_id\": 1\n}\n"
+								},
+								"url": {
+									"raw": "{{base_url}}/user",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Book",
+					"item": [
+						{
+							"name": "book/id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/book/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"book",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1234"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "book/id",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 1234,\n  \"title\": \"Judul Buku Satu\",\n  \"isbn\": \"1-234-5678-9101112-13\",\n  \"writer\": \"Dr. Who\"\n}\n"
+								},
+								"url": {
+									"raw": "{{base_url}}/book/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"book",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1234"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "book/id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/book/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"book",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1234"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "book",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/book?p=1&rp=10&title=Judul Buku Satu&isbn=1-234-5678-9101112-13",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"book"
+									],
+									"query": [
+										{
+											"key": "p",
+											"value": "1"
+										},
+										{
+											"key": "rp",
+											"value": "10"
+										},
+										{
+											"key": "title",
+											"value": "Judul Buku Satu"
+										},
+										{
+											"key": "isbn",
+											"value": "1-234-5678-9101112-13"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "book",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"client_id\": 1234,\n  \"client_key\": \"CLIENT01\",\n  \"client_secret\": \"SECRET01\",\n  \"status\": true\n}\n"
+								},
+								"url": {
+									"raw": "{{base_url}}/book",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"book"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Rent",
+					"item": [
+						{
+							"name": "rent/id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/rent/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"rent",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1234"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "rent",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/rent?p=1&rp=10&book_id=1234&user_id=1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"rent"
+									],
+									"query": [
+										{
+											"key": "p",
+											"value": "1"
+										},
+										{
+											"key": "rp",
+											"value": "10"
+										},
+										{
+											"key": "book_id",
+											"value": "1234"
+										},
+										{
+											"key": "user_id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "rent",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"book_id\": 1234,\n  \"user_id\": 1\n}\n"
+								},
+								"url": {
+									"raw": "{{base_url}}/rent",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"rent"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Binance",
+			"item": [
+				{
+					"name": "Kline/Candlestick Data",
+					"item": [
+						{
+							"name": "1000 BTCUSDT 1 minute",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/v1/klines?limit=1000&symbol=BTCUSDT&interval=1m",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"klines"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "1000"
+										},
+										{
+											"key": "symbol",
+											"value": "BTCUSDT"
+										},
+										{
+											"key": "interval",
+											"value": "1m"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "BTCUSDT 1 day (1-7 Sept 2022)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/v1/klines?symbol=BTCUSDT&interval=1d&startTime=1662045514000&endTime=1662563914000",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"klines"
+									],
+									"query": [
+										{
+											"key": "symbol",
+											"value": "BTCUSDT"
+										},
+										{
+											"key": "interval",
+											"value": "1d"
+										},
+										{
+											"key": "startTime",
+											"value": "1662045514000"
+										},
+										{
+											"key": "endTime",
+											"value": "1662563914000"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Account",
+					"item": [
+						{
+							"name": "account info",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"const ts  = Date.now();",
+											"pm.environment.set(\"timestamp\", ts);",
+											" ",
+											"let paramsObject = {};",
+											" ",
+											"const binance_api_secret = pm.environment.get(\"api_secret\");",
+											" ",
+											"const parameters = pm.request.url.query;",
+											" ",
+											"parameters.map((param) => {",
+											"    if (param.key != 'signature' && ",
+											"        param.key != 'timestamp' && ",
+											"        !is_empty(param.value) &&",
+											"        !is_disabled(param.disabled)) {",
+											"            paramsObject[param.key] = param.value;",
+											"            //console.log(encodeURIComponent(param.value));",
+											"            //pm.environment.set(param.key, encodeURIComponent(param.value));",
+											"    }",
+											"})",
+											"        ",
+											"Object.assign(paramsObject, {'timestamp': ts});",
+											" ",
+											"if (binance_api_secret) {",
+											"    const queryString = Object.keys(paramsObject).map((key) => {",
+											"        return `${key}=${paramsObject[key]}`;",
+											"    }).join('&');",
+											"    console.log(queryString);",
+											"    const signature = CryptoJS.HmacSHA256(queryString, binance_api_secret).toString();",
+											"    pm.environment.set(\"signature\", signature);",
+											"}",
+											" ",
+											" ",
+											"function is_disabled(str) {",
+											"    return str == true;",
+											"}",
+											" ",
+											"function is_empty(str) {",
+											"    if (typeof str == 'undefined' ||",
+											"        !str || ",
+											"        str.length === 0 || ",
+											"        str === \"\" ||",
+											"        !/[^\\s]/.test(str) ||",
+											"        /^\\s*$/.test(str) ||",
+											"        str.replace(/\\s/g,\"\") === \"\")",
+											"    {",
+											"        return true;",
+											"    }",
+											"    else",
+											"    {",
+											"        return false;",
+											"    }",
+											"}",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {}
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-MBX-APIKEY",
+										"value": "{{api_key}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/v3/account?timestamp={{timestamp}}&signature={{signature}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v3",
+										"account"
+									],
+									"query": [
+										{
+											"key": "timestamp",
+											"value": "{{timestamp}}"
+										},
+										{
+											"key": "signature",
+											"value": "{{signature}}"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
